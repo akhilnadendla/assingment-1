@@ -1,0 +1,170 @@
+TRY - 41
+
+1.mkdir Test
+cd Test
+
+2.cat > employeelist
+cat > skillset
+ls
+
+3.cd ..
+mkdir Test2
+cd Test2
+cat > skillset
+ln -s skillset slink
+ln skillset hlink
+ls -l
+rm skillset
+ls -l
+
+4.chmod 764 employeelist
+cd user2
+ls -l
+cat employeelist
+cat >> employeelist
+
+5.chmod 744 employeelist
+cd user2
+cat employeelist
+cat >> employeelist
+
+6.chmod 662 employeelist
+cd user2
+cat employeelist
+cat >> employeelist
+
+7. chmod 775 employeelist
+cd user2
+cat employeelist
+cat >> employeelist
+
+8.chgrp user3 employeelist
+ls -l
+
+9.chown user5 employeelist
+
+10.wc employeelist
+
+
+TRY - 47
+
+1.cat > file1
+hai
+
+2.cat >> file1
+hello
+good morning
+
+3.cat > file2
+sonata software
+trainee
+ETG
+
+4.cat file1 cat file2
+
+5.cat file1 file2
+
+6.cat file1 file2 > file3
+
+7.cat file1 file2 file3 file4 file5
+
+8.cat file1 file2 file3 file4 file5>errlog
+
+9.cat file1 file2 file3 file4 file5
+
+10.cp file1 file6
+
+TRY -55
+
+1.head -25 file | tail +10
+
+2.head -10 file | tail+10
+
+3.find . -type f -newermt 2021-11-05
+
+4.ls -lSr
+
+5.wc -l file
+
+6.find Test -type f -mtime +3
+
+TRY -61
+
+1.cat file | grep a
+
+2.cat file | grep the
+
+3.cat file | grep [.]
+
+4.cat file | grep [_a] [_b] [_c]
+
+5.cat file | grep "def"
+
+6.cat file | grep -v "^[0-9]"
+
+7.cat file | grep -n "^$" 
+
+8.ls -d
+
+9.sudo cat /etc/shadow | grep user [1-10]
+
+
+TRY - 63
+
+1.ls -l>longlist
+
+2.ls | sort -r
+
+3.ls -li
+
+4.ls -li | sort -k 3
+
+5.ls -las>sortedfile
+
+TRY - 66
+
+1.echo JAGADEESH | [:upper:] [:lower:]
+
+2.sed -i 's/^[0-9].*$//g' file
+
+4.cat file|sed 's/ //g'
+
+5.wc file
+
+
+TRY - 94
+
+1.echo "header" file
+
+3.grep bc file
+
+8.head -n -3 file
+
+
+TRY - 117
+
+1.sort file&
+
+2.nohup sort file&
+
+4.sleep 5 && echo hello
+
+5.ps -1
+
+5.ps -o ppid
+
+TRY - 118
+
+1.at now +3 minute
+banner "HELLO"
+
+2.at now +10 day
+ps -e>processfile
+
+3.echo "Happy Birthday" | at now +1 day
+
+TRY -120
+
+crontab 5****>file
+crontab -l
+crontab -r
