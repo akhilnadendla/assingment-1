@@ -1,0 +1,111 @@
+1)-
+read num1
+read num2
+sum=`expr $num1 + $num2`
+echo "the sum= $sum"
+sub=`expr $num1 - $num2`
+echo "the sub= $sub"
+mul=`expr $num1 * $num2`
+echo "the mul= $mul"
+div=`expr $num1 / $num2`
+echo "the div= $div"
+---------------------------------------------------------
+2)-
+echo "enter the string"
+read str1
+echo "enter second string"
+read str2
+expr "banner $str1 $str2"
+---------------------------------------------------------
+3)-
+echo "username"
+read uname
+qu=`write $uname`
+or
+echo "username"
+read uname
+if who -u | grep -q "^$uname"
+then
+write $uname
+else
+echo "user not logged in"
+---------------------------------------------------------
+			slide 151
+1)-
+echo $2
+echo $4
+echo $6
+echo $8
+echo $10
+echo $12
+
+bash p.sh 1 2 3 4 5 6 7 8 9 10 11 12 
+----------------------------------------------------------
+2)-
+echo "enter arg"
+read a
+until [ $a = "EOF" ]
+do
+        echo $a | tr '[:lower:]' '[:upper:]'
+        read a
+done
+-----------------------------------------------------------
+3. 
+
+	echo $1
+	echo $2
+	echo $3
+	set 10 100
+	echo $1
+	echo $2
+	echo $3
+
+------------------------------------------------------------
+
+   					slide 176
+
+1. 
+	read a
+	while [ $a != "EOF" ]
+	do
+	        case $a in
+	                [0-9]*) echo "number";;
+	                [a-z]*) echo "alphabet";;
+	                [A-Z]*) echo "alphabet";;
+	                *) echo "others";;
+	        esac
+	        read a
+	done
+
+---------------------------------------------------------------
+2. 
+	
+	echo "which is the capital of India?"
+	read a
+	echo $a
+	until [ $a = "Delhi" ]
+	do
+	        read a
+	done
+	echo "$a is correct"
+----------------------------------------------------------------
+3.
+
+	echo "enter file name"
+	read a
+	echo "enter a filename with path to copy"
+	read b
+	cp $a $b
+	rm $a
+	cat $b
+ ----------------------------------------------------------------
+						slide 186
+
+1)-
+filename=$1
+echo "Number of words with vowels"
+while read line; do
+        echo $line
+        less $1 | grep -E [aeiouAEIOU] | wc -w > print.txt
+done < print.txt
+-------------------------------------------------------------------
